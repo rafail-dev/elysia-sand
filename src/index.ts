@@ -23,7 +23,7 @@ const app = new Elysia()
 
     const verified: Elysia<PathType, InstanceType> = app;
 
-    return app;
+    return app.get('/', ({ store }) => store.mykey);
   })
   .listen(3000);
 
